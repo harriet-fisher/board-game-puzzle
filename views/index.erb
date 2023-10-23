@@ -12,13 +12,18 @@
         align-items: center; /* vertical alignment */
         justify-content: center; /* horizontal alignment */
       }
+      .centered-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* horizontal alignment of the children */
+      }
     </style>
   </head>
   <body>
     <div class="centered-content">
-      <h1>Are you ready to proceed?</h1>
-      <form action="/enter-password" method="get">
-        <button type="submit">Yes</button>
+      <h1>Welcome to ___GAME NAME___ Online Manual</h1>
+      <form action="/rules" method="get">
+        <button type="submit">Game Rules</button>
       </form>
     </div>
   </body>

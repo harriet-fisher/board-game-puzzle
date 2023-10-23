@@ -4,6 +4,10 @@ get '/' do
   erb :index
 end
 
+get '/rules' do
+  erb(:rules)
+end
+
 get '/enter-password' do
   erb(:password_input)
 end
