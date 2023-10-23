@@ -2,11 +2,24 @@
 <html>
   <head>
     <title>Secret App</title>
+    <style>
+      /* CSS to center content */
+      body {
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center; /* vertical alignment */
+        justify-content: center; /* horizontal alignment */
+      }
+    </style>
   </head>
   <body>
-    <h1>Are you ready to proceed?</h1>
-    <form action="/enter-password" method="get">
-      <button type="submit">Yes</button>
-    </form>
+    <div class="centered-content">
+      <h1>Are you ready to proceed?</h1>
+      <form action="/enter-password" method="get">
+        <button type="submit">Yes</button>
+      </form>
+    </div>
   </body>
 </html>
