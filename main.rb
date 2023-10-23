@@ -11,6 +11,8 @@ end
 post '/check' do
   if params['password'] == 'lionspawcove'
     erb :success
+  elsif params['password'] == 'LIONSPAWCOVE'
+    erb :success
   else
     erb :failure
   end
