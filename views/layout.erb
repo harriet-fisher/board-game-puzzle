@@ -1,0 +1,23 @@
+@@layout
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secret App</title>
+</head>
+<body>
+  <%= yield %>
+</body>
+</html>
+
+@@index
+<h1>Are you ready to proceed?</h1>
+<form action="/check" method="post">
+  <button type="submit">Yes</button>
+</form>
+
+@@success
+<h1>Yay you win!</h1>
+<img src="https://media.giphy.com/media/l3V0j3ytFyGHhSX9S/giphy.gif" alt="Success GIF">
+
+@@failure
+<h1>Oh no! I'm still trapped</h1>
