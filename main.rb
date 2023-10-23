@@ -4,6 +4,10 @@ get '/' do
   erb :index
 end
 
+get '/enter-password' do
+  erb(:password_input)
+end
+
 post '/check' do
   if params['password'] == 'lionspawcove'
     erb :success
