@@ -1,10 +1,7 @@
 services:
   - type: web
-    name: sinatra-app
+    name: secret-app
     env: ruby
     plan: free
     buildCommand: "bundle install"
     startCommand: "ruby main.rb"
-    envVars:
-      - key: RACK_ENV
-        value: production
