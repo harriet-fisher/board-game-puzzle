@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: sinatra-app
+    env: ruby
+    buildCommand: "bundle install"
+    startCommand: "ruby main.rb"
+    envVars:
+      - key: RACK_ENV
+        value: production
+
