@@ -1,30 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Secret App</title>
     <style>
-      /* CSS to center content */
-      body {
-        height: 100vh;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        display: flex;
-        align-items: center; /* vertical alignment */
-        justify-content: center; /* horizontal alignment */
-      }
-      .centered-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* horizontal alignment of the children */
-      }
+        /* CSS to center content */
+        body {
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #F5EDD6;
+            color: #5D4637;
+            position: relative; 
+        }
+
+        .centered-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+
+        .secret-button {
+          width: 30px;
+          height: 30px;
+          background-color: #FFBE03; 
+          border: none;
+          position: absolute;
+          border-radius: 40px;
+        }
+        .special-e {
+            color: #69862C;
+        }
+
+        .top-left {
+            top: 5px;
+            left: 5px;
+        }
+
+        .top-right {
+            top: 5px;
+            right: 5px;
+        }
+
+        .bottom-left {
+            bottom: 5px;
+            left: 5px;
+        }
+
+        .bottom-right {
+            bottom: 5px;
+            right: 5px;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="centered-content">
-      <h1>Welcome to ___GAME NAME___ Online Manual</h1>
-      <form action="/rules" method="get">
-        <button type="submit">Game Rules</button>
-      </form>
+        <h1>W<span class="special-e">e</span>lcome to Aquatica</h1>
+        <h2>Online Manual</h2>
+        <form action="/rules" method="get">
+            <button type="submit">Game Rules</button>
+        </form>
     </div>
-  </body>
+
+    <!-- Secret buttons -->
+    <button class="secret-button top-left" data-position="1"></button>
+    <button class="secret-button top-right" data-position="3"></button>
+    <button class="secret-button bottom-left" data-position="4"></button>
+    <button class="secret-button bottom-right" data-position="2"></button>
+
+    <script>
+        (function () {
+            let sequence = [1, 2, 3, 4];
+            let currentPos = 0;
+
+            document.querySelectorAll('.secret-button').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    if (parseInt(e.target.getAttribute('data-position')) === sequence[currentPos]) {
+                        currentPos++;
+                        if (currentPos === sequence.length) {
+                            // Correct sequence entered
+                            window.location.href = "/enter-password";
+                        }
+                    } else {
+                        // Incorrect click, reset sequence
+                        currentPos = 0;
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+
 </html>
