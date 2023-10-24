@@ -3,6 +3,7 @@
 
 <head>
     <title>Secret App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /* CSS to center content */
         body {
@@ -14,7 +15,9 @@
             justify-content: center;
             background-color: #F5EDD6;
             color: #5D4637;
-            position: relative; 
+            position: relative;
+            overflow: hidden; /* Make the page non-scrollable */
+            font-size: 20px; /* Increase the default font size */
         }
 
         .centered-content {
@@ -27,7 +30,7 @@
         .secret-button {
           width: 30px;
           height: 30px;
-          background-color: #FFBE03; 
+          background-color: #C8A54E; 
           border: none;
           position: absolute;
           border-radius: 40px;
@@ -54,6 +57,9 @@
         .bottom-right {
             bottom: 5px;
             right: 5px;
+        }
+        h1, h2 {
+            margin: 0.5em 0; /* Reduce margin to make things fit better */
         }
     </style>
 </head>
