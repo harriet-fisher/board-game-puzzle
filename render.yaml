@@ -4,4 +4,4 @@ services:
     env: ruby
     plan: free
     buildCommand: "bundle install"
-    startCommand: "ruby main.rb"
+    startCommand: "bundle exec ruby main.rb"
